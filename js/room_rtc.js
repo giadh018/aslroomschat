@@ -1,14 +1,13 @@
 let APP_ID;
 
-// Lấy APP_ID từ server
 fetch('http://localhost:3000/getAppId')
     .then(response => response.json())
     .then(data => {
         APP_ID = data.appId;
-        joinRoomInit(); // Gọi hàm joinRoomInit sau khi APP_ID được lấy
+        joinRoomInit(); 
     })
     .catch(error => {
-        console.error('Lỗi khi lấy APP_ID:', error);
+        console.error('Error to get APP_ID:', error);
     });
 
 let uid = sessionStorage.getItem('uid')

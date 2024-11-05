@@ -14,3 +14,7 @@ app.get('/getAppId', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server đang chạy tại http://localhost:${PORT}`);
 });
+
+app.use(cors({
+    origin: 'http://www.aslroomchat.42web.io'
+}));

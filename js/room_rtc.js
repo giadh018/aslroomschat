@@ -1,14 +1,4 @@
-let APP_ID;
-
-fetch('http://localhost:3000/getAppId')
-    .then(response => response.json())
-    .then(data => {
-        APP_ID = data.appId;
-        joinRoomInit(); 
-    })
-    .catch(error => {
-        console.error('Error to get APP_ID:', error);
-    });
+const APP_ID = "7c6ad9d89c0846c3b86377c7e068dd88"
 
 let uid = sessionStorage.getItem('uid')
 if(!uid){
